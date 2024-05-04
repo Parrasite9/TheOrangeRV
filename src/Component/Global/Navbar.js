@@ -23,7 +23,7 @@ function Navbar() {
     ]
 
   return (
-    <nav>
+    <nav className='flex flex-1'>
       {navLinks.map((item, index) => (
         <Link key={index} className={item.className} to={item.href}>
             {item.linkName}
