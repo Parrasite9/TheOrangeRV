@@ -1,0 +1,21 @@
+.navbar__container {
+    border: 2px solid yellow;
+    display: flex;
+    padding: .5% 0;
+}
+
+.logo__container {
+    border: 2px solid green;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.navlinks__container {
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-evenly;
+}
+
