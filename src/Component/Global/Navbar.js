@@ -1,8 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// import '../../CSS/Global/Navbar.css'
+import { useScreenWidth } from '../Global/ScreenWidthContext.js'
 
 function Navbar() {
+
+
+  const isMobile = useScreenWidth()
 
   const navLinks = [
     {
@@ -23,9 +28,10 @@ function Navbar() {
 
   ]
 
+
   return (
     <nav className='flex py-2'>
-      <div className="flex w-1/4 justify-center">
+      <div className="flex w-3/4 justify-center md:w-1/4">
         THE ORANGE RV
       </div>
 
