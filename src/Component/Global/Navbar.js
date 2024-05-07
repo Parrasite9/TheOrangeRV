@@ -6,11 +6,13 @@ import { useScreenWidth } from '../Global/ScreenWidthContext.js'
 
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Navbar() {
 
 
   const isMobile = useScreenWidth()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const navLinks = [
     {
@@ -31,6 +33,28 @@ function Navbar() {
 
   ]
 
+  const showNavLinks = () => {
+    return navLinks.map((item, index) => (
+      <Link key={index} className={item.className} to={item.href}>
+        {item.linkName}
+      </Link>
+    ));
+  }
+
+  const activateMenu = () => {
+    setMenuOpen(true)
+    console.log(!menuOpen);
+
+    console.log('Menu is Open');
+  }
+
+  const exitMenu = () => {
+    setMenuOpen(false)
+    console.log(menuOpen);
+    console.log('Menu is Closed');
+  }
+  
+
 
   return (
     <nav className='flex py-2'>
@@ -40,21 +64,25 @@ function Navbar() {
 
       {isMobile ? (
         <div className="menu__icon__container flex w-full justify-end pr-2">
-          <MenuIcon className='flex flex-end' />
+          {menuOpen ? (
+            <>
+            <CloseIcon className='flex flex-end' onClick={exitMenu} />
+
+            </>
+          ) : (
+            <>
+            <MenuIcon className='flex flex-end' onClick={activateMenu} />
+            </>
+          )}
         </div>
       ) : (
       <div className="flex w-full pl-20 justify-evenly">
-        {navLinks.map((item, index) => (
-          <Link key={index} className={item.className} to={item.href}>
-            {item.linkName}
-          </Link>
-        ))}
+        {showNavLinks()}
       </div>
       )}
-    </nav>
 
-
-
+    </nav>  
+  
   )
 }
 
