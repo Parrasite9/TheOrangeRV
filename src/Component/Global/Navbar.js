@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useScreenWidth } from '../Global/ScreenWidthContext.js'
+import '../../CSS/output.css'
 
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
@@ -52,7 +53,7 @@ function Navbar() {
 
 
   return (
-    <nav className='flex py-2'>
+    <nav className='flex py-2 bg-lively-orange text-ivory-white'>
       <div className="flex w-3/4 justify-center md:w-1/4 pl-2">
         THE ORANGE RV
       </div>
@@ -60,11 +61,11 @@ function Navbar() {
       {isMobile ? (
         <div className="menu__icon__container flex w-full justify-end pr-2">
           {menuOpen ? (
-            <div className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center'>
+            <div className='fixed inset-0 bg-lively-orange text-ivory-white  z-50 flex flex-col items-center justify-center'>
               <div className='absolute top-0 right-0 p-5'>
                 <CloseIcon className='cursor-pointer' onClick={exitMenu} />
               </div>
-              <div className="mobile__menu flex flex-col items-center justify-center py-5 px-10 space-y-4 ">
+              <div className="mobile__menu flex flex-col items-center justify-center py-5 px-10 space-y-4">
                 {showNavLinks()}
               </div>
             </div>

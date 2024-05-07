@@ -3,13 +3,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'dreamsicle': '#FFA17F',
-        'vibrant-orange': '#FF851B',
-        'soft-peach': '#FFD1B2',
-        'cream-white': '#FFF3E4',
-        'warm-grey': '#D3D3D3',
-        'dark-charcoal': '#333333',
-        'sky-blue': '#00A4CC',
+        'lively-orange': '#FF4500',
+        'sunset-orange': '#FF7043',
+        'peach': '#FFCCB3',
+        'ivory-white': '#FFF8E1',
+        'taupe': '#BDBDBD',
+        'charcoal-grey': '#424242',
+        'teal-blue': '#008080',
       }
     },
   },
