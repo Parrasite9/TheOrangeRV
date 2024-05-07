@@ -569,8 +569,28 @@ video {
   z-index: 50;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .flex {
   display: flex;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-3\/4 {
@@ -615,13 +635,58 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-green-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(240 253 244 / var(--tw-border-opacity));
+}
+
+.border-red-50 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 242 242 / var(--tw-border-opacity));
+}
+
+.border-l-teal-blue {
+  --tw-border-opacity: 1;
+  border-left-color: rgb(0 128 128 / var(--tw-border-opacity));
+}
+
 .bg-lively-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(255 69 0 / var(--tw-bg-opacity));
 }
 
+.bg-orange-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.bg-sunset-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 112 67 / var(--tw-bg-opacity));
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
 .p-5 {
   padding: 1.25rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .px-10 {
@@ -639,6 +704,26 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -651,6 +736,38 @@ video {
   padding-right: 0.5rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -659,6 +776,11 @@ video {
 .text-ivory-white {
   --tw-text-opacity: 1;
   color: rgb(255 248 225 / var(--tw-text-opacity));
+}
+
+.hover\:bg-orange-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 88 12 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
