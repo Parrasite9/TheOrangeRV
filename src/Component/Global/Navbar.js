@@ -43,15 +43,10 @@ function Navbar() {
 
   const activateMenu = () => {
     setMenuOpen(true)
-    console.log(!menuOpen);
-
-    console.log('Menu is Open');
   }
 
   const exitMenu = () => {
     setMenuOpen(false)
-    console.log(menuOpen);
-    console.log('Menu is Closed');
   }
   
 
@@ -65,10 +60,14 @@ function Navbar() {
       {isMobile ? (
         <div className="menu__icon__container flex w-full justify-end pr-2">
           {menuOpen ? (
-            <>
-            <CloseIcon className='flex flex-end' onClick={exitMenu} />
-
-            </>
+            <div className='fixed inset-0 bg-white z-50 flex flex-col items-center justify-center'>
+              <div className='absolute top-0 right-0 p-5'>
+                <CloseIcon className='cursor-pointer' onClick={exitMenu} />
+              </div>
+              <div className="mobile__menu flex flex-col items-center justify-center py-5 px-10 space-y-4 ">
+                {showNavLinks()}
+              </div>
+            </div>
           ) : (
             <>
             <MenuIcon className='flex flex-end' onClick={activateMenu} />
