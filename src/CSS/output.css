@@ -569,6 +569,10 @@ video {
   resize: both;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -584,6 +588,14 @@ video {
 
 .pl-20 {
   padding-left: 5rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pl-2 {
+  padding-left: 0.5rem;
 }
 
 @media (min-width: 768px) {
