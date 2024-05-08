@@ -46,8 +46,35 @@ function Footer() {
         </div>
         </div>
       ) : (
-        <>
-        </>
+        <div className='footer__container__desktop bg-lively-orange text-white py-10'>
+
+          <div className='desktop__footer flex justify-between px-[5.5%] 2xl:pl-[6.5%]'>
+            <div className="footer_logo">
+              <h2 className='font-bold text-xl mb-5'>The Orange RV</h2>
+            </div>
+
+            <div className="footer__navlinks mb-5">
+              <ul>
+                {navLinks.map((item, index) => (
+                  <li className='mb-2'>
+                    <Link className={item.className} to={item.href}>
+                    {item.linkName}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="footer__phone mb-5 2xl:pr-[8.5%]">
+              <LocalPhoneIcon />
+              <a href="#">+1 (432) 301-9668</a>
+            </div>
+          </div>
+
+          <div className="copyright text-center">
+              <p>© All Rights Reserved 2024 The Orange RV</p>
+          </div>
+        </div>
       )}
       </>
     
