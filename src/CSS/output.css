@@ -637,6 +637,10 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-evenly {
   justify-content: space-evenly;
 }
@@ -709,6 +713,11 @@ video {
 .px-12 {
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pl-2 {
@@ -915,8 +924,52 @@ video {
     padding-right: 0px;
   }
 
+  .\32xl\:px-\[\%\] {
+    padding-left: %;
+    padding-right: %;
+  }
+
+  .\32xl\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .\32xl\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .\32xl\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .\32xl\:pr-5 {
     padding-right: 1.25rem;
+  }
+
+  .\32xl\:pl-\[6\.5\%\] {
+    padding-left: 6.5%;
+  }
+
+  .\32xl\:pl-\[1\.5\%\] {
+    padding-left: 1.5%;
+  }
+
+  .\32xl\:pl-\[3\.5\%\] {
+    padding-left: 3.5%;
+  }
+
+  .\32xl\:pl-\[4\.5\%\] {
+    padding-left: 4.5%;
+  }
+
+  .\32xl\:pr-\[6\.5\%\] {
+    padding-right: 6.5%;
+  }
+
+  .\32xl\:pr-\[8\.5\%\] {
+    padding-right: 8.5%;
   }
 
   .\32xl\:text-6xl {
