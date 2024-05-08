@@ -8,6 +8,7 @@ import '../../CSS/output.css'
 // MUI ICONS 
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavLinks } from './NavContext.js'
 
 function Navbar() {
 
@@ -15,35 +16,7 @@ function Navbar() {
   const isMobile = useScreenWidth()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const navLinks = [
-    {
-        linkName: "Home",
-        href: '/',
-        className: "navbar-link",
-    },
-    {
-        linkName: "Search RVs",
-        href: '/search',
-        className: "navbar-link",
-    },
-    {
-      linkName: "Trade & Sell",
-      href: '/trade-and-sell',
-      className: "navbar-link",
-
-    },
-    {
-      linkName: "About",
-      href: '/about',
-      className: "navbar-link",
-    },
-    {
-        linkName: "Contact Us",
-        href: '/contact-us',
-        className: "navbar-link",
-    },
-
-  ]
+  const { navLinks } = useNavLinks()
 
   const showNavLinks = () => {
     return navLinks.map((item, index) => (
@@ -77,7 +50,15 @@ function Navbar() {
                 <CloseIcon className='cursor-pointer' onClick={exitMenu} />
               </div>
               <div className="mobile__menu flex flex-col items-center justify-center py-5 px-10 space-y-4">
-                {showNavLinks()}
+                <ul>
+                  {navLinks.map((item, index) => (
+                    <li key={index}>
+                      <Link className={item.className} to={item.href}>
+                        {item.linkName}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ) : (
