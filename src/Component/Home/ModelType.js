@@ -58,6 +58,9 @@ function ModelType() {
                 </Link>
               ))}
             </div>
+            <div className="model__button flex justify-center">
+              <Link className='bg-sunset-orange text-ivory-white rounded p-2 px-5 mb-5'>Search Inventory</Link>
+            </div>
           </div>
         </>
       ) : (
@@ -68,11 +71,14 @@ function ModelType() {
                             xl:px-[2.5%] 
                             2xl:px-[4%]">
               {models.map((item, index) => (
-                <Link className={`${item.className} border rounded border-sunset-orange mx-4`} to={item.href}>
+                <Link className={`${item.className} border rounded border-sunset-orange mx-4 cursor-pointer`} to={item.href}>
                   <img src={item.image} alt={item.name} />
                   <p className='text-center bg-peach py-1'>{item.name}</p>
                 </Link>
               ))}
+            </div>
+            <div className="model__button flex justify-center">
+              <Link className='bg-sunset-orange text-ivory-white font-semibold rounded text-center p-2 w-1/5 mb-5 cursor-pointer'>Search Inventory</Link>
             </div>
           </div>
         </>
