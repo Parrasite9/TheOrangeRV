@@ -6,7 +6,7 @@ function ModelType() {
 
   const models = [
     {
-      name: 'Pop-Up Campers',
+      name: 'Pop Campers',
       image: '/images/models/popup.png',
       href: '#',
     },
@@ -54,7 +54,7 @@ function ModelType() {
               {models.map((item, index) => (
                 <Link className={`${item.className} border rounded border-sunset-orange`} to={item.href}>
                   <img src={item.image} alt={item.name} />
-                  <p className='text-center'>{item.name}</p>
+                  <p className='text-center bg-peach py-1'>{item.name}</p>
                 </Link>
               ))}
             </div>
@@ -62,6 +62,19 @@ function ModelType() {
         </>
       ) : (
         <>
+          <div className='modelType__container'>
+            <h2 className='text-center font-semibold text-sunset-orange text-xl mt-5'>Select Your Style</h2>
+            <div className="modelType flex m-8
+                            xl:px-[2.5%] 
+                            2xl:px-[4%]">
+              {models.map((item, index) => (
+                <Link className={`${item.className} border rounded border-sunset-orange mx-4`} to={item.href}>
+                  <img src={item.image} alt={item.name} />
+                  <p className='text-center bg-peach py-1'>{item.name}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
         </>
       )}
     </>

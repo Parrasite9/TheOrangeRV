@@ -573,6 +573,11 @@ video {
   margin: 2rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -690,6 +695,11 @@ video {
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
+.bg-peach {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 204 179 / var(--tw-bg-opacity));
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -734,6 +744,16 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pl-2 {
@@ -795,6 +815,11 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-charcoal-grey {
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+
 .hover\:bg-orange-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(234 88 12 / var(--tw-bg-opacity));
@@ -811,11 +836,51 @@ video {
     padding-left: 5.5%;
     padding-right: 5.5%;
   }
+
+  .xl\:px-\[5\%\] {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .xl\:px-\[4\%\] {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .xl\:px-\[3\%\] {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .xl\:px-\[2\%\] {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .xl\:px-\[2\.5\%\] {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
 }
 
 @media (min-width: 1536px) {
   .\32xl\:w-4\/5 {
     width: 80%;
+  }
+
+  .\32xl\:px-\[3\.5\%\] {
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+  }
+
+  .\32xl\:px-\[4\.5\%\] {
+    padding-left: 4.5%;
+    padding-right: 4.5%;
+  }
+
+  .\32xl\:px-\[4\%\] {
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
   .\32xl\:pl-\[6\.5\%\] {
@@ -824,6 +889,22 @@ video {
 
   .\32xl\:pr-\[8\.5\%\] {
     padding-right: 8.5%;
+  }
+
+  .\32xl\:pl-\[5\.5\%\] {
+    padding-left: 5.5%;
+  }
+
+  .\32xl\:pl-\[3\.5\%\] {
+    padding-left: 3.5%;
+  }
+
+  .\32xl\:pl-\[4\.5\%\] {
+    padding-left: 4.5%;
+  }
+
+  .\32xl\:pl-\[2\.5\%\] {
+    padding-left: 2.5%;
   }
 
   .\32xl\:text-2xl {
