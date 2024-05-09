@@ -48,8 +48,8 @@ function ModelType() {
     <>
       {isMobile ? (
         <>
-          <div className='modelType__container'>
-            <h2 className='text-center font-semibold text-sunset-orange text-xl mt-5'>Select Your Style</h2>
+          <div className='modelType__container bg-cool-white'>
+            <h2 className='text-center font-semibold text-lively-orange text-xl mt-5'>Select Your Style</h2>
             <div className="modelType grid grid-cols-2 gap-4 m-8">
               {models.map((item, index) => (
                 <Link className={`${item.className} border rounded border-sunset-orange`} to={item.href}>
@@ -59,7 +59,7 @@ function ModelType() {
               ))}
             </div>
             <div className="model__button flex justify-center">
-              <Link className='bg-sunset-orange text-ivory-white rounded p-2 px-5 mb-5'>Search Inventory</Link>
+              <Link className='bg-lively-orange font-semibold text-ivory-white rounded p-2 px-5 mb-5'>Search Inventory</Link>
             </div>
           </div>
         </>
