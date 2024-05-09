@@ -10,7 +10,11 @@ module.exports = {
         'taupe': '#BDBDBD',
         'charcoal-grey': '#424242',
         'teal-blue': '#008080',
-      }
+      },
+      borderColor: theme => ({
+        ...theme('colors'),
+        'sunset-orange': theme('colors.sunset-orange'),
+      })
     },
   },
   plugins: [],

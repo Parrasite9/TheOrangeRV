@@ -58,7 +58,7 @@ function Footer() {
                 {navLinks.map((item, index) => (
                   <li className='mb-2'>
                     <Link className={item.className} to={item.href}>
-                    {item.linkName}
+                      {item.linkName}
                     </Link>
                   </li>
                 ))}
