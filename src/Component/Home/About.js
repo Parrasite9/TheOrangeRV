@@ -18,12 +18,12 @@ function About() {
       ) : (
         <div className="about__desktop__container flex">
           <div className="about__img__container flex justify-center w-1/2">
-            <img src="/images/about/about.jpeg" alt="about-img" className='w-full' />
+            <img src="/images/about/about.jpeg" alt="about-img" className='h-[88%]' />
           </div>
 
           <div className="desktop__about__text w-1/2 flex items-center p-5">
             <div>
-              <h2 className='font-bold text-lively-orange'>Who Are We?</h2>
+              <h2 className='font-bold text-lively-orange text-xl md:mb-5'>Who Are We?</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nihil, fugit dolorum nisi voluptas dolor libero. Aspernatur voluptatibus optio eaque blanditiis numquam maxime, earum vero saepe neque, accusantium labore quam expedita quod enim? Officiis quod, praesentium id veniam aliquam voluptatem quisquam illum quo quae non voluptates libero autem consequatur quidem deserunt delectus, ipsa odio fugiat dolore! Eveniet officiis optio laboriosam consequatur harum odit. Cupiditate explicabo reiciendis ut aliquam ullam nam, magnam saepe cumque aut qui dolore minima autem nemo in! Illum nobis dolorum tempora odio, dolor minus odit officiis fugit eaque maxime nulla perspiciatis non unde voluptatem quo eveniet dolorem?</p>
             </div>
           </div>
