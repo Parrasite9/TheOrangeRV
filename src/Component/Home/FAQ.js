@@ -3,7 +3,8 @@ import React from 'react'
 function FAQ() {
   return (
     <section className='faq__container mb-5 px-8'>
-      <ul className="max-w-2xl mx-auto mt-20 divide-y shadow shadow-lively-orange rounded-xl text-center">
+      <h1 className='text-center font-semibold text-lively-orange text-lg mt-5'>Frequently Asked Questions</h1>
+      <ul className="max-w-2xl mx-auto mt-10 divide-y shadow shadow-lively-orange rounded-xl text-center">
         <li>
           <details className="group">
             <summary className="flex items-center justify-center gap-3 px-4 py-3 font-medium marker:content-none hover:cursor-pointer">
