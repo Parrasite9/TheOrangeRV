@@ -12,11 +12,13 @@ function Home() {
     <div className='Home'>
       <Navbar />
       <Hero />
-      <ModelType />
-      <About />
-      <Location />
-      <FAQ />
-      <ContactUs />
+      <div className="home__components">
+        <ModelType />
+        <About />
+        <Location />
+        <FAQ />
+        <ContactUs />
+      </div>
       <Footer />
     </div>
   )
