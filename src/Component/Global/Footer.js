@@ -54,6 +54,7 @@ function Footer() {
             </div>
 
             <div className="footer__navlinks mb-5">
+              <h3 className=' font-bold mb-2'>Pages</h3>
               <ul>
                 {navLinks.map((item, index) => (
                   <li className='mb-2'>
@@ -65,7 +66,13 @@ function Footer() {
               </ul>
             </div>
 
+            <div className="social__media">
+              <h3 className='mb-2 font-bold'>Follow Us On Social Media!</h3>
+              <p>FACEBOOK</p>
+            </div>
+
             <div className="footer__phone mb-5 2xl:pr-[8.5%]">
+              <h2 className='mb-2 font-bold'>Hablamos Espanol</h2>
               <LocalPhoneIcon />
               <a href="#">+1 (432) 301-9668</a>
             </div>
