@@ -6,6 +6,7 @@ import ModelType from './ModelType.js'
 import About from './About'
 import FAQ from './FAQ'
 import Location from './Location'
+import ContactUs from './ContactUs'
 function Home() {
   return (
     <div className='Home'>
@@ -15,6 +16,7 @@ function Home() {
       <About />
       <Location />
       <FAQ />
+      <ContactUs />
       <Footer />
     </div>
   )
