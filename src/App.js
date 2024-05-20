@@ -4,6 +4,7 @@ import './CSS/output.css';
 import Home from './Component/Home/Home'
 import { ScreenWidthProvider } from './Component/Global/ScreenWidthContext';
 import { NavProvider } from './Component/Global/NavContext';
+import Browse from './Component/Product/Browse';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/search' element={<Browse />} />
             </Routes>
           </BrowserRouter>
         </NavProvider>
