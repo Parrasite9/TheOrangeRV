@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import inventory from './Inventory';
+import inventory from '../Inventory';
 
 function Search() {
 
@@ -18,12 +18,12 @@ function Search() {
             value={query}
             onChange={e => setQuery(e.target.value)}
             />
-            <div>
+            <div className='flex'>
             {filteredInventory.map(rv => (
-                <div key={rv.id}>
-                <h2>{rv.name}</h2>
-                <p>Price: ${rv.price}</p>
-                <img src={rv.image} alt={rv.name} />
+                <div key={rv.id} className='border'>
+                    <img src={rv.image} alt={rv.name} />
+                    <h2>{rv.name}</h2>
+                    <p>Price: ${rv.price}</p>
                 </div>
             ))}
             </div>
