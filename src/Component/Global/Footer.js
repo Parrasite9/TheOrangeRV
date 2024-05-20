@@ -31,7 +31,7 @@ function Footer() {
           <div className="footer__navlinks mb-5">
             <ul>
               {navLinks.map((item, index) => (
-                <li className='mb-2'>
+                <li key={index} className='mb-2'>
                   <Link className={item.className} to={item.href}>
                   {item.linkName}
                   </Link>
@@ -57,7 +57,7 @@ function Footer() {
               <h3 className=' font-bold mb-2'>Pages</h3>
               <ul>
                 {navLinks.map((item, index) => (
-                  <li className='mb-2'>
+                  <li key={index} className='mb-2'>
                     <Link className={item.className} to={item.href}>
                       {item.linkName}
                     </Link>

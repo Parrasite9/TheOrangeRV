@@ -52,7 +52,7 @@ function ModelType() {
             <h2 className='text-center font-semibold text-lively-orange text-xl mt-5'>Select Your Style</h2>
             <div className="modelType grid grid-cols-2 gap-4 m-8">
               {models.map((item, index) => (
-                <Link className={`${item.className} border rounded border-sunset-orange`} to={item.href}>
+                <Link key={index} className={`${item.className} border rounded border-sunset-orange`} to={item.href}>
                   <img src={item.image} alt={item.name} />
                   <p className='text-center bg-peach py-1'>{item.name}</p>
                 </Link>
@@ -71,7 +71,7 @@ function ModelType() {
                             xl:px-[2.5%] 
                             2xl:px-[4%]">
               {models.map((item, index) => (
-                <Link className={`${item.className} border rounded border-sunset-orange mx-4 cursor-pointer`} to={item.href}>
+                <Link key={index} className={`${item.className} border rounded border-sunset-orange mx-4 cursor-pointer`} to={item.href}>
                   <img src={item.image} alt={item.name} />
                   <p className='text-center bg-peach py-1'>{item.name}</p>
                 </Link>
