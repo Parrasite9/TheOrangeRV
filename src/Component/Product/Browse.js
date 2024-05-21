@@ -8,10 +8,9 @@ function Browse() {
   return (
     <div>
         <Navbar />
-        <h1>Search</h1>
         <Filter />
-      <Search />
-      <Footer />
+        <Search />
+        <Footer />
     </div>
   )
 }

@@ -51,12 +51,13 @@ function Filter() {
 
   return (
     <div className="w-full p-4">
-      <Accordion expanded={expanded}>
+      <Accordion expanded={expanded} className='border border-lively-orange' >
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className='text-lively-orange' />}
           aria-controls="panel1-content"
           id="panel1-header"
           onClick={() => setExpanded(!expanded)}
+          className='font-lively-orange'
         >
           <span className="text-lg font-semibold">Filter RVs</span>
         </AccordionSummary>
