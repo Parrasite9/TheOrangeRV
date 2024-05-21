@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionActions from '@mui/material/AccordionActions';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Button from '@mui/material/Button';
+import RangeSlider from './Slider';
 import inventory from '../Inventory';
-import RangeSlider from './Slider'; // Assuming you save the RangeSlider component in the same directory
 
 function Filter() {
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [yearRange, setYearRange] = useState([2000, 2024]);
+  const [sleepsRange, setSleepsRange] = useState([1, 20]);
   // Add more state variables for other filters
 
   const handlePriceChange = (event, newValue) => {
@@ -15,31 +23,46 @@ function Filter() {
     setYearRange(newValue);
   };
 
+  const handleSleepsChange = (event, newValue) => {
+    setSleepsRange(newValue);
+  };
+
   const filteredInventory = inventory.filter(item => 
     item.price >= priceRange[0] && item.price <= priceRange[1] &&
-    item.year >= yearRange[0] && item.year <= yearRange[1]
+    item.year >= yearRange[0] && item.year <= yearRange[1] &&
+    item.sleeps >= sleepsRange[0] && item.sleeps <= sleepsRange[1]
     // Add more filter conditions
   );
 
   return (
-    <div>
-      <h2>Filter RVs</h2>
-      <div>
-        <label>Price Range</label>
-        <RangeSlider value={priceRange} onChange={handlePriceChange} label="Price" />
-      </div>
-      <div>
-        <label>Year Range</label>
-        <RangeSlider value={yearRange} onChange={handleYearChange} label="Year" />
-      </div>
-      {/* Add more filter options */}
-      <div>
+    <div className="w-full p-4">
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1-content"
+          id="panel1-header"
+        >
+          <span className="text-lg font-semibold">Filter RVs</span>
+        </AccordionSummary>
+        <AccordionDetails className="flex flex-col items-center">
+          <RangeSlider value={priceRange} onChange={handlePriceChange} label="Price Range" min={0} max={50000} />
+          <RangeSlider value={yearRange} onChange={handleYearChange} label="Year Range" min={2000} max={2024} />
+          <RangeSlider value={sleepsRange} onChange={handleSleepsChange} label="Sleeps Range" min={1} max={20} />
+          {/* Add more filter options */}
+        </AccordionDetails>
+        <AccordionActions>
+          <Button className="text-blue-500">Reset</Button>
+          <Button className="text-blue-500">Apply</Button>
+        </AccordionActions>
+      </Accordion>
+      <div className="mt-4">
         {filteredInventory.map(rv => (
-          <div key={rv.id}>
-            <h2>{rv.name}</h2>
-            <p>Price: ${rv.price}</p>
-            <p>Year: {rv.year}</p>
-            <img src={rv.image} alt={rv.name} />
+          <div key={rv.id} className="mb-4">
+            <h2 className="text-xl font-semibold">{rv.name}</h2>
+            <p className="text-lg">Price: ${rv.price}</p>
+            <p className="text-lg">Year: {rv.year}</p>
+            <p className="text-lg">Sleeps: {rv.sleeps}</p>
+            <img src={rv.image} alt={rv.name} className="w-full h-auto" />
           </div>
         ))}
       </div>

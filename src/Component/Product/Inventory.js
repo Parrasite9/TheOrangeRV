@@ -5,7 +5,8 @@ const inventory = [
         id: 1, 
         name: 'Pop Camper', 
         type: 'Popup', 
-        price: 15000, 
+        price: 15000,
+        sleeps: 5, 
         image: '/images/rv1.jpg' 
     },
     // TRAVEL TRAILERS 
@@ -13,7 +14,8 @@ const inventory = [
         id: 2, 
         name: 'Travel Trailer', 
         type: 'Trailer', 
-        price: 20000, 
+        price: 20000,
+        sleeps: 5, 
         image: '/images/rv2.jpg' 
     },
     // BUMPER PULLS 
@@ -21,7 +23,8 @@ const inventory = [
         id: 3, 
         name: 'Fifth Wheel', 
         type: 'Fifth', 
-        price: 35000, 
+        price: 35000,
+        sleeps: 5, 
         image: '/images/rv3.jpg' 
     },
     // FIFTH WHEELS 
@@ -29,7 +32,8 @@ const inventory = [
         id: 4, 
         name: 'Toy Hauler', 
         type: 'ToyHauler', 
-        price: 45000, 
+        price: 45000,
+        sleeps: 5, 
         image: '/images/rv4.jpg' 
     },
     // Add more RVs

@@ -1,32 +1,68 @@
-import React from 'react';
+import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import TextField from '@mui/material/TextField';
 
 function valuetext(value) {
   return `${value}`;
 }
 
-function RangeSlider({ value, onChange, label }) {
+function RangeSlider({ value, onChange, label, min, max }) {
+  const handleInputChange = (index, event) => {
+    const newValue = [...value];
+    newValue[index] = event.target.value === '' ? '' : Number(event.target.value);
+    onChange(null, newValue);
+  };
+
   return (
-    <Box sx={{ width: 300 }}>
+    <Box sx={{ width: '100%', padding: '10px' }} className="flex flex-col items-center">
+      <label className="w-full text-center mb-2">{label}</label>
+      <Box className="w-full flex justify-between items-center mb-2">
+        <TextField
+          value={value[0]}
+          onChange={(e) => handleInputChange(0, e)}
+          inputProps={{
+            step: 1,
+            min: min,
+            max: value[1],
+            type: 'number',
+            'aria-labelledby': 'input-slider',
+          }}
+          sx={{ width: '40%' }}
+        />
+        <TextField
+          value={value[1]}
+          onChange={(e) => handleInputChange(1, e)}
+          inputProps={{
+            step: 1,
+            min: value[0],
+            max: max,
+            type: 'number',
+            'aria-labelledby': 'input-slider',
+          }}
+          sx={{ width: '40%' }}
+        />
+      </Box>
       <Slider
-        getAriaLabel={() => `${label} range`}
         value={value}
         onChange={onChange}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
+        min={min}
+        max={max}
         sx={{
-          color: 'lively-orange', // Adjust to your custom theme colors
+          color: '#FFA500', // lively-orange
           '& .MuiSlider-thumb': {
-            color: 'lively-orange', // Adjust to your custom theme colors
+            color: '#FFA500', // lively-orange
           },
           '& .MuiSlider-track': {
-            color: 'sunset-orange', // Adjust to your custom theme colors
+            color: '#FF4500', // sunset-orange
           },
           '& .MuiSlider-rail': {
-            color: 'sunset-orange', // Adjust to your custom theme colors
+            color: '#FF4500', // sunset-orange
           },
         }}
+        className="w-full"
       />
     </Box>
   );
