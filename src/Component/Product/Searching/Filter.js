@@ -9,11 +9,16 @@ import Button from '@mui/material/Button';
 import RangeSlider from './Slider';
 import inventory from '../Inventory';
 
+
 function Filter() {
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [yearRange, setYearRange] = useState([2000, 2024]);
   const [sleepsRange, setSleepsRange] = useState([1, 20]);
-  // Add more state variables for other filters
+  const [expanded, setExpanded] = useState(true);
+
+  const defaultPriceRange = [0, 50000];
+  const defaultYearRange = [2000, 2024];
+  const defaultSleepsRange = [1, 20];
 
   const handlePriceChange = (event, newValue) => {
     setPriceRange(newValue);
@@ -27,20 +32,31 @@ function Filter() {
     setSleepsRange(newValue);
   };
 
+  const handleReset = () => {
+    setPriceRange(defaultPriceRange);
+    setYearRange(defaultYearRange);
+    setSleepsRange(defaultSleepsRange);
+    setExpanded(false);
+  };
+
+  const handleApply = () => {
+    setExpanded(false);
+  };
+
   const filteredInventory = inventory.filter(item => 
     item.price >= priceRange[0] && item.price <= priceRange[1] &&
     item.year >= yearRange[0] && item.year <= yearRange[1] &&
     item.sleeps >= sleepsRange[0] && item.sleeps <= sleepsRange[1]
-    // Add more filter conditions
   );
 
   return (
     <div className="w-full p-4">
-      <Accordion>
+      <Accordion expanded={expanded}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1-content"
           id="panel1-header"
+          onClick={() => setExpanded(!expanded)}
         >
           <span className="text-lg font-semibold">Filter RVs</span>
         </AccordionSummary>
@@ -48,11 +64,10 @@ function Filter() {
           <RangeSlider value={priceRange} onChange={handlePriceChange} label="Price Range" min={0} max={50000} />
           <RangeSlider value={yearRange} onChange={handleYearChange} label="Year Range" min={2000} max={2024} />
           <RangeSlider value={sleepsRange} onChange={handleSleepsChange} label="Sleeps Range" min={1} max={20} />
-          {/* Add more filter options */}
         </AccordionDetails>
         <AccordionActions>
-          <Button className="text-blue-500">Reset</Button>
-          <Button className="text-blue-500">Apply</Button>
+          <Button onClick={handleReset} className="text-blue-500">Reset</Button>
+          <Button onClick={handleApply} className="text-blue-500">Apply</Button>
         </AccordionActions>
       </Accordion>
       <div className="mt-4">
@@ -71,3 +86,4 @@ function Filter() {
 }
 
 export default Filter;
+
