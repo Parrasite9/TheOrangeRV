@@ -7,7 +7,7 @@ function valuetext(value) {
   return `${value}`;
 }
 
-function RangeSlider({ value, onChange, label, min, max }) {
+function RangeSlider({ value, onChange, label, min, max, className }) {
   const handleInputChange = (index, event) => {
     const newValue = [...value];
     newValue[index] = event.target.value === '' ? '' : Number(event.target.value);
@@ -16,7 +16,7 @@ function RangeSlider({ value, onChange, label, min, max }) {
 
   return (
     <Box sx={{ width: '100%', padding: '10px' }} className="flex flex-col items-center">
-      <label className="w-full text-center mb-2">{label}</label>
+      <label className={`w-full text-center mb-2 ${className}`}>{label}</label>
       <Box className="w-full flex justify-between items-center mb-2">
         <TextField
           value={value[0]}

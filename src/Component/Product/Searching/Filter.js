@@ -62,9 +62,9 @@ function Filter() {
           <span className="text-lg font-semibold">Filter RVs</span>
         </AccordionSummary>
         <AccordionDetails className="flex flex-col items-center">
-          <RangeSlider value={priceRange} onChange={handlePriceChange} label="Price Range" min={0} max={50000} />
-          <RangeSlider value={yearRange} onChange={handleYearChange} label="Year Range" min={2000} max={2024} />
-          <RangeSlider value={sleepsRange} onChange={handleSleepsChange} label="Sleeps Range" min={1} max={20} />
+          <RangeSlider className='font-semibold' value={priceRange} onChange={handlePriceChange} label="Price Range" min={0} max={50000} />
+          <RangeSlider className='font-semibold' value={yearRange} onChange={handleYearChange} label="Year Range" min={2000} max={2024} />
+          <RangeSlider className='font-semibold' value={sleepsRange} onChange={handleSleepsChange} label="Sleeps Range" min={1} max={20} />
         </AccordionDetails>
         <AccordionActions>
           <Button onClick={handleReset} className="text-blue-500">Reset</Button>
