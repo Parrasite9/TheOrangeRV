@@ -9,7 +9,7 @@ function Browse() {
     <div>
         <Navbar />
         <Filter />
-        <Search />
+        {/* <Search /> */}
         <Footer />
     </div>
   )
