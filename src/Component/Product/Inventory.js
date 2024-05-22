@@ -8,7 +8,7 @@ const inventory = [
         type: 'Popup', 
         price: 15000,
         sleeps: 5, 
-        image: '/images/rv1.jpg',
+        image: '/images/models/modelType/make/1.jpg',
     },
     // TRAVEL TRAILERS 
     { 
@@ -18,7 +18,7 @@ const inventory = [
         type: 'Trailer', 
         price: 20000,
         sleeps: 5, 
-        image: '/images/rv2.jpg',
+        image: '/images/models/modelType/make/1.jpg',
     },
     // BUMPER PULLS 
     { 
@@ -28,7 +28,7 @@ const inventory = [
         type: 'Fifth', 
         price: 35000,
         sleeps: 5, 
-        image: '/images/rv3.jpg',
+        image: '/images/models/modelType/make/1.jpg',
     },
     // FIFTH WHEELS 
     { 
@@ -38,7 +38,7 @@ const inventory = [
         type: 'ToyHauler', 
         price: 45000,
         sleeps: 5, 
-        image: '/images/rv4.jpg',
+        image: '/images/models/modelType/make/1.jpg',
     },
     // Add more RVs
 
@@ -49,7 +49,7 @@ const inventory = [
         type: 'Trailer', 
         price: 7300,
         sleeps: 5, 
-        image: '/images/rv2.jpg',
+        image: '/images/models/bumper/flagstaff/1.jpg',
     },
 
     { 
@@ -59,7 +59,7 @@ const inventory = [
         type: 'Fifth', 
         price: 10300,
         sleeps: 5, 
-        image: '/images/rv2.jpg',
+        image: '/images/models/fifth/laredo/1.jpg',
     },
 
     { 
@@ -69,7 +69,7 @@ const inventory = [
         type: 'Travel', 
         price: 14900,
         sleeps: 5, 
-        image: '/images/rv2.jpg',
+        image: '/images/models/travel/outback/1.jpg',
     },
 
     { 
@@ -79,7 +79,7 @@ const inventory = [
         type: 'Camper', 
         price: 8900,
         sleeps: 5, 
-        image: '/images/rv2.jpg',
+        image: '/images/models/camper/wilderness/1.jpg',
     },
   ];
   
