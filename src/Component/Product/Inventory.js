@@ -2,7 +2,6 @@
 const inventory = [
     // POP UPS 
     { 
-        id: 1,
         year: 2020, 
         name: 'Pop Camper', 
         type: 'Popup', 
@@ -15,7 +14,6 @@ const inventory = [
     },
     // TRAVEL TRAILERS 
     { 
-        id: 2,
         year: 2020, 
         name: 'Travel Trailer', 
         type: 'Trailer', 
@@ -28,7 +26,6 @@ const inventory = [
     },
     // BUMPER PULLS 
     { 
-        id: 3,
         year: 2020, 
         name: 'Fifth Wheel', 
         type: 'Fifth', 
@@ -41,7 +38,6 @@ const inventory = [
     },
     // FIFTH WHEELS 
     { 
-        id: 4,
         year: 2020, 
         name: 'Toy Hauler', 
         type: 'ToyHauler', 
@@ -55,7 +51,6 @@ const inventory = [
     // Add more RVs
 
     { 
-        id: 5,
         year: 2020, 
         name: 'Flagstaff', 
         type: 'Trailer', 
@@ -68,7 +63,6 @@ const inventory = [
     },
 
     { 
-        id: 6,
         year: 2020, 
         name: 'Laredo', 
         type: 'Fifth', 
@@ -81,7 +75,6 @@ const inventory = [
     },
 
     { 
-        id: 7,
         year: 2016, 
         name: 'Outback', 
         type: 'Travel', 
@@ -94,7 +87,6 @@ const inventory = [
     },
 
     { 
-        id: 8,
         year: 2007, 
         name: 'Wilderness', 
         type: 'Camper', 
@@ -107,4 +99,7 @@ const inventory = [
     },
   ];
   
+
+const inventoryWithIds = inventory.map((item, index) => ({ ...item, id: index + 1 }));
+
 export default inventory;
