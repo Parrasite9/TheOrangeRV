@@ -88,7 +88,7 @@ function Filter() {
                 <div className="price__and__sleeps flex justify-between">
                     <div className="condition__and__sleeps">
                         <p className='font-semibold '>USED</p>
-                        <p className="text-lg">Sleeps: {rv.sleeps}</p>
+                        {/* <p className="text-lg">Sleeps: {rv.sleeps}</p> */}
                     </div>
 
                     {/* PRICE AND PRICE TEXT  */}
@@ -102,7 +102,34 @@ function Filter() {
                 <div className="offer__and__available flex justify-between mb-5">
                     <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
                     <button className='bg-lively-orange text-white p-2 w-[40%]'>Make An Offer</button>    
-                </div>  
+                </div> 
+
+                <div className="rv__specs flex justify-between mx-2 text-center text-sm">
+                    {/* LENGTH  */}
+                    <div className="spec__data">
+                        <p>Length (ft)</p>
+                        <p>{rv.length}</p>
+                    </div>
+
+                    {/* WEIGHT */}
+                    <div className="spec__data">
+                        <p>Weight (lbs)</p>
+                        <p>{rv.weight}</p>
+                    </div>
+
+                    {/* SLIDES  */}
+                    <div className="spec__data">
+                        <p>Slides</p>
+                        <p>{rv.slides}</p>
+                    </div>   
+
+                    {/* SLEEPS  */}
+                    <div className="spec__data">
+                        <p>Sleeps</p>
+                        <p>{rv.sleeps}</p>
+                    </div>
+ 
+                </div> 
             </div>
 
           </div>
