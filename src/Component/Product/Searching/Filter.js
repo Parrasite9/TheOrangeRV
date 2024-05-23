@@ -73,31 +73,38 @@ function Filter() {
       </Accordion>
       <div className="mt-4">
         {filteredInventory.map(rv => (
-          <div key={rv.id} className="mb-4 border bg-cool-white">
-            <img src={rv.image} alt={rv.name} className="w-full h-auto mb-5" />
-            <div className="year__and__model flex mb-5">
-                <p className="text-lg font-semibold">{rv.year}</p>
-                <h2 className="text-xl font-semibold ml-2">{rv.name}</h2>
+          <div key={rv.id} className="mb-4 border rounded-md border-lively-orange bg-cool-white">
+            <div className="rv__img">
+                <img src={rv.image} alt={rv.name} className="w-full h-auto mb-5" />
             </div>
 
-            {/* PRICE AND SLEEPS  */}
-            <div className="price__and__sleeps flex justify-between">
-                <div className="condition__and__sleeps">
-                    <p className='font-semibold '>USED</p>
-                    <p className="text-lg">Sleeps: {rv.sleeps}</p>
+            <div className="rv__info mx-2">
+                <div className="year__and__model flex mb-5">
+                    <p className="text-lg font-semibold">{rv.year}</p>
+                    <h2 className="text-xl font-semibold ml-2">{rv.name}</h2>
                 </div>
 
-                {/* PRICE AND PRICE TEXT  */}
-                <div className="price__and__priceText flex flex-col flex-end">
-                    <p>Sale Price</p>
-                    <p className="text-lg">${rv.price}</p>
-                </div>              
+                {/* PRICE AND SLEEPS  */}
+                <div className="price__and__sleeps flex justify-between">
+                    <div className="condition__and__sleeps">
+                        <p className='font-semibold '>USED</p>
+                        <p className="text-lg">Sleeps: {rv.sleeps}</p>
+                    </div>
+
+                    {/* PRICE AND PRICE TEXT  */}
+                    <div className="price__and__priceText flex flex-col flex-end">
+                        <p>Sale Price</p>
+                        <p className="text-lg">${rv.price}</p>
+                    </div>              
+                </div>
+
+                {/* BUTTONS  */}
+                <div className="offer__and__available flex justify-between mb-5">
+                    <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
+                    <button className='bg-lively-orange text-white p-2 w-[40%]'>Make An Offer</button>    
+                </div>  
             </div>
 
-            <div className="offer__and__available flex justify-between">
-                    <button className='bg-blue-500 text-white p-2'>Confirm Availability</button>    
-                    <button className='bg-lively-orange text-white p-2'>Make An Offer</button>    
-                </div>  
           </div>
         ))}
       </div>
