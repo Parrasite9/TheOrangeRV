@@ -13,7 +13,8 @@ module.exports = {
         'charcoal-grey': '#424242',
         'teal-blue': '#008080',
         'dark-gray': '#333',
-        'light-blue': '#E0F7FA'
+        'light-blue': '#E0F7FA',
+        'fresh-green': '#34A853',
       },
       borderColor: theme => ({
         ...theme('colors'),

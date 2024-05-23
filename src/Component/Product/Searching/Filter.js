@@ -101,9 +101,10 @@ function Filter() {
                 {/* BUTTONS  */}
                 <div className="offer__and__available flex justify-between mb-5">
                     <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
-                    <button className='bg-lively-orange text-white p-2 w-[40%]'>Make An Offer</button>    
+                    <button className='bg-fresh-green text-white p-2 w-[40%]'>Make An Offer</button>    
                 </div> 
 
+                {/* RV SPECS  */}
                 <div className="rv__specs flex justify-between mx-2 text-center text-sm">
                     {/* LENGTH  */}
                     <div className="spec__data">
@@ -130,6 +131,11 @@ function Filter() {
                     </div>
  
                 </div> 
+
+                {/* VIEW DETAILS  */}
+                <div className="details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
+                    <button>View Details</button>
+                </div>
             </div>
 
           </div>
