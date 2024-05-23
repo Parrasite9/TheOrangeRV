@@ -1,4 +1,8 @@
-// inventory.js
+const generateAlbum = (folderPath, count) => {
+    return Array.from({ length: count }, (_, i) => `${folderPath}/${i + 1}.jpg`);
+  };
+
+
 const inventory = [
     // POP UPS 
     { 
@@ -11,6 +15,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/camper/wilderness', 14)
     },
     // TRAVEL TRAILERS 
     { 
@@ -23,6 +28,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/camper/wilderness', 14)
     },
     // BUMPER PULLS 
     { 
@@ -35,6 +41,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/camper/wilderness', 14)
     },
     // FIFTH WHEELS 
     { 
@@ -47,6 +54,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/camper/wilderness', 14)
     },
     // Add more RVs
 
@@ -60,6 +68,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/bumper/flagstaff', 17)
     },
 
     { 
@@ -72,6 +81,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/fifth/laredo', 16)
     },
 
     { 
@@ -84,6 +94,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/travel/outback', 15)
     },
 
     { 
@@ -96,6 +107,7 @@ const inventory = [
         length: 34,
         weight: 100,
         slides: 2,
+        album: generateAlbum('/images/models/camper/wilderness', 14)
     },
   ];
   
