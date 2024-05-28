@@ -5,6 +5,8 @@ import Home from './Component/Home/Home'
 import { ScreenWidthProvider } from './Component/Global/ScreenWidthContext';
 import { NavProvider } from './Component/Global/NavContext';
 import Browse from './Component/Product/Browse';
+import { inventoryWithIds, inventory} from './Component/Product/Inventory';
+import Description from './Component/Product/Description';
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/search' element={<Browse />} />
+              <Route path={`/browse/:id/:year/:type/:name`} element={<Description inventory={inventoryWithIds} /> } />
             </Routes>
           </BrowserRouter>
         </NavProvider>

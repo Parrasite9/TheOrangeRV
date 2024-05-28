@@ -7,7 +7,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import RangeSlider from './Slider';
-import inventory from '../Inventory';
+// import inventory from '../Inventory';
+import { Link } from 'react-router-dom';
+import {inventoryWithIds} from '../Inventory.js'
 
 
 function Filter() {
@@ -43,7 +45,7 @@ function Filter() {
     setExpanded(false);
   };
 
-  const filteredInventory = inventory.filter(item => 
+  const filteredInventory = inventoryWithIds.filter(item => 
     item.price >= priceRange[0] && item.price <= priceRange[1] &&
     item.year >= yearRange[0] && item.year <= yearRange[1] &&
     item.sleeps >= sleepsRange[0] && item.sleeps <= sleepsRange[1]
@@ -134,7 +136,7 @@ function Filter() {
 
                 {/* VIEW DETAILS  */}
                 <div className="details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
-                    <button>View Details</button>
+                    <Link to={`/browse/${rv.id}/${rv.year}/${rv.type}/${rv.name}`}><button>View Details</button></Link>
                 </div>
             </div>
 

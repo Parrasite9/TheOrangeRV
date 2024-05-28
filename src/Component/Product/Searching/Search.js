@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import inventory from '../Inventory';
+import {inventory} from '../Inventory';
 
 function Search() {
 

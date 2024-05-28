@@ -114,4 +114,4 @@ const inventory = [
 
 const inventoryWithIds = inventory.map((item, index) => ({ ...item, id: index + 1 }));
 
-export default inventory;
+export {inventory, inventoryWithIds};
