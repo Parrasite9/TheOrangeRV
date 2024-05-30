@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../Global/Footer';
 import Navbar from '../Global/Navbar';
 import Modal from 'react-modal';
@@ -39,7 +39,18 @@ function Description({ inventory }) {
       <div className="flex-grow">
         {item ? (
           <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">{item.name}</h1>
+            <div className="description__title text-3xl font-bold mb-4">
+              <div className="condition__year__name flex">
+                <h1>
+                  <span className="font-normal text-lively-orange">{item.condition}</span>
+                  {' • '}
+                  <span className='font-light'>{item.year} {item.name}</span>
+                </h1>
+              </div>
+              <h1>{item.model} </h1>
+            </div>
+
+            {/* CARASOUL  */}
             <div className="mb-4">
               <Carousel
                 showArrows={true}
@@ -58,10 +69,67 @@ function Description({ inventory }) {
                 ))}
               </Carousel>
             </div>
-            <p className="text-lg mb-2"><strong>Year:</strong> {item.year}</p>
-            <p className="text-lg mb-2"><strong>Type:</strong> {item.type}</p>
-            <p className="text-lg mb-2"><strong>Price:</strong> ${item.price}</p>
-            {/* Render other details as needed */}
+
+            {/* DETAILS  */}
+            <div className="rv__info mx-2">
+                <div className="year__and__model flex mb-5">
+                    <p className="text-lg font-semibold">{item.year}</p>
+                    <h2 className="text-xl font-semibold ml-2">{item.name}</h2>
+                </div>
+
+                {/* PRICE AND SLEEPS  */}
+                <div className="price__and__sleeps flex justify-between">
+                    <div className="condition__and__sleeps">
+                        <p className='font-semibold '>USED</p>
+                        {/* <p className="text-lg">Sleeps: {item.sleeps}</p> */}
+                    </div>
+
+                    {/* PRICE AND PRICE TEXT  */}
+                    <div className="price__and__priceText flex flex-col flex-end">
+                        <p>Sale Price</p>
+                        <p className="text-lg">${item.price}</p>
+                    </div>              
+                </div>
+
+                {/* BUTTONS  */}
+                <div className="offer__and__available flex justify-between mb-5">
+                    <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
+                    <button className='bg-fresh-green text-white p-2 w-[40%]'>Make An Offer</button>    
+                </div> 
+
+                {/* RV SPECS  */}
+                <div className="rv__specs flex justify-between mx-2 text-center text-sm">
+                    {/* LENGTH  */}
+                    <div className="spec__data">
+                        <p>Length (ft)</p>
+                        <p>{item.length}</p>
+                    </div>
+
+                    {/* WEIGHT */}
+                    <div className="spec__data">
+                        <p>Weight (lbs)</p>
+                        <p>{item.weight}</p>
+                    </div>
+
+                    {/* SLIDES  */}
+                    <div className="spec__data">
+                        <p>Slides</p>
+                        <p>{item.slides}</p>
+                    </div>   
+
+                    {/* SLEEPS  */}
+                    <div className="spec__data">
+                        <p>Sleeps</p>
+                        <p>{item.sleeps}</p>
+                    </div>
+ 
+                </div> 
+
+                {/* VIEW DETAILS  */}
+                <div className="details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
+                    <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>View Details</button></Link>
+                </div>
+            </div>
           </div>
         ) : (
           <p className="text-center text-xl mt-8">Item not found</p>

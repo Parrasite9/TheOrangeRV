@@ -6,8 +6,10 @@ const generateAlbum = (folderPath, count) => {
 const inventory = [
     // POP UPS 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Pop Camper', 
+        model: 'Model Name',
         type: 'Popup', 
         price: 15000,
         sleeps: 5, 
@@ -19,8 +21,10 @@ const inventory = [
     },
     // TRAVEL TRAILERS 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Travel Trailer', 
+        model: 'Model Name',
         type: 'Trailer', 
         price: 20000,
         sleeps: 5, 
@@ -32,8 +36,10 @@ const inventory = [
     },
     // BUMPER PULLS 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Fifth Wheel', 
+        model: 'Model Name',
         type: 'Fifth', 
         price: 35000,
         sleeps: 5, 
@@ -45,8 +51,10 @@ const inventory = [
     },
     // FIFTH WHEELS 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Toy Hauler', 
+        model: 'Model Name',
         type: 'ToyHauler', 
         price: 45000,
         sleeps: 5, 
@@ -59,8 +67,10 @@ const inventory = [
     // Add more RVs
 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Flagstaff', 
+        model: 'Model Name',
         type: 'Trailer', 
         price: 7300,
         sleeps: 5, 
@@ -72,8 +82,10 @@ const inventory = [
     },
 
     { 
+        condition: 'Used',
         year: 2020, 
         name: 'Laredo', 
+        model: 'Model Name',
         type: 'Fifth', 
         price: 10300,
         sleeps: 5, 
@@ -85,8 +97,10 @@ const inventory = [
     },
 
     { 
+        condition: 'Used',
         year: 2016, 
         name: 'Outback', 
+        model: 'Model Name',
         type: 'Travel', 
         price: 14900,
         sleeps: 5, 
@@ -98,8 +112,10 @@ const inventory = [
     },
 
     { 
+        condition: 'Used',
         year: 2007, 
         name: 'Wilderness', 
+        model: 'Model Name',
         type: 'Camper', 
         price: 8900,
         sleeps: 5, 
