@@ -71,14 +71,14 @@ function Description({ inventory }) {
             </div>
 
             {/* DETAILS  */}
-            <div className="rv__info mx-2">
-                <div className="year__and__model flex mb-5">
-                    <p className="text-lg font-semibold">{item.year}</p>
-                    <h2 className="text-xl font-semibold ml-2">{item.name}</h2>
+            <div className="description__rv__info mx-2">
+                <div className="description__year__and__model flex mb-5">
+                    <p className="description__text-lg font-semibold">{item.year}</p>
+                    <h2 className="description__text-xl font-semibold ml-2">{item.name}</h2>
                 </div>
 
                 {/* PRICE AND SLEEPS  */}
-                <div className="price__and__sleeps flex justify-between">
+                <div className="description__price__and__sleeps flex justify-between">
                     <div className="condition__and__sleeps">
                         <p className='font-semibold '>USED</p>
                         {/* <p className="text-lg">Sleeps: {item.sleeps}</p> */}
@@ -92,41 +92,13 @@ function Description({ inventory }) {
                 </div>
 
                 {/* BUTTONS  */}
-                <div className="offer__and__available flex justify-between mb-5">
+                <div className="description__offer__and__available flex justify-between mb-10">
                     <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
                     <button className='bg-fresh-green text-white p-2 w-[40%]'>Make An Offer</button>    
                 </div> 
 
-                {/* RV SPECS  */}
-                <div className="rv__specs flex justify-between mx-2 text-center text-sm">
-                    {/* LENGTH  */}
-                    <div className="spec__data">
-                        <p>Length (ft)</p>
-                        <p>{item.length}</p>
-                    </div>
-
-                    {/* WEIGHT */}
-                    <div className="spec__data">
-                        <p>Weight (lbs)</p>
-                        <p>{item.weight}</p>
-                    </div>
-
-                    {/* SLIDES  */}
-                    <div className="spec__data">
-                        <p>Slides</p>
-                        <p>{item.slides}</p>
-                    </div>   
-
-                    {/* SLEEPS  */}
-                    <div className="spec__data">
-                        <p>Sleeps</p>
-                        <p>{item.sleeps}</p>
-                    </div>
- 
-                </div> 
-
                 {/* VIEW DETAILS  */}
-                <div className="details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
+                <div className="description__details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
                     <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>View Details</button></Link>
                 </div>
             </div>
