@@ -6,6 +6,14 @@ import Footer from '../Global/Footer';
 import Navbar from '../Global/Navbar';
 import Modal from 'react-modal';
 
+import StraightenIcon from '@mui/icons-material/Straighten';
+import ScaleIcon from '@mui/icons-material/Scale';
+import CarCrashIcon from '@mui/icons-material/CarCrash';
+import HeightIcon from '@mui/icons-material/Height';
+import HotelIcon from '@mui/icons-material/Hotel';
+import WaterDropIcon from '@mui/icons-material/WaterDrop';
+
+
 Modal.setAppElement('#root'); // Set the app element for accessibility
 
 function Description({ inventory }) {
@@ -93,7 +101,7 @@ function Description({ inventory }) {
 
                 {/* BUTTONS  */}
                 <div className="description__offer__and__available flex justify-between mb-10">
-                    <button className='bg-blue-500 text-white p-2 w-[40%]'>Confirm Availability</button>    
+                    <button className='bg-blue-500 text-center text-white p-2 w-[40%]'>Confirm Availability</button>    
                     <button className='bg-fresh-green text-white p-2 w-[40%]'>Make An Offer</button>    
                 </div> 
 
@@ -101,6 +109,85 @@ function Description({ inventory }) {
                 <div className="description__details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
                     <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>View Details</button></Link>
                 </div>
+            </div>
+
+            <div className="description__details__container">
+              {/* SECTION TITLES  */}
+              <div className="section__titles">
+                <p>Specs & Overview</p>
+                <p>Location Details</p>
+              </div>
+              
+              {/* SPECS  */}
+              <div className="specs__and__overview">
+                <div className="specs__title">
+                  <h1>Specs & Overview</h1>
+                </div>
+
+
+
+                <div class="container mx-auto p-4">
+                  <div class="grid grid-cols-4 grid-rows-6 gap-0">
+                    <div class="col-span-4 row-span-6">
+                      {/* div1 (container) */}
+                      <div class="grid grid-cols-4 grid-rows-6 gap-0">
+                        <div class="col-span-2 row-span-2 mb-5 mr-5">
+                          {/* div2 (section container) */}
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><StraightenIcon /></div>
+                            <div class="col-span-1 font-semibold text-center">Length</div>
+                            <div class="col-span-1 font-normal text-center">{item.length} ft</div>
+                          </div>
+                        </div>
+                        <div class="col-span-2 row-span-2 ml-5">
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"> <ScaleIcon /></div>
+                            <div class="col-span-1 font-semibold text-center"> Weight</div>
+                            <div class="col-span-1 font-normal text-center">{item.weight} lbs</div>
+                          </div>
+                        </div>
+                        {/* <!-- Repeat the pattern for the rest of the divs --> */}
+                        <div class="col-span-2 row-span-2 mb-5 mr-5">
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><CarCrashIcon /></div>
+                            <div class="col-span-1 font-semibold text-center">GVWR</div>
+                            <div class="col-span-1 font-normal text-center">{item.gvwr} lbs </div>
+                          </div>
+                        </div>
+                        <div class="col-span-2 row-span-2 ml-5">
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><HeightIcon /> </div>
+                            <div class="col-span-1 font-semibold text-center">Height</div>
+                            <div class="col-span-1 font-normal text-center">{item.height} lbs </div>
+                          </div>
+                        </div>
+                        <div class="col-span-2 row-span-2 mb-5 mr-5">
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><HotelIcon /> </div>
+                            <div class="col-span-1 font-semibold text-center">Sleeps</div>
+                            <div class="col-span-1 font-normal text-center">{item.sleeps} </div>
+                          </div>
+                        </div>
+                        <div class="col-span-2 row-span-2 ml-5">
+                          <div class="grid grid-cols-2 grid-rows-2 gap-0">
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><WaterDropIcon /> </div>
+                            <div class="col-span-1 font-semibold text-center">Water</div>
+                            <div class="col-span-1 font-normal text-center">{item.freshWater} gal. </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+              </div>
+
+              {/* LOCATION DETAILS  */}
+              <div className="location__details"></div>
             </div>
           </div>
         ) : (
@@ -117,7 +204,7 @@ function Description({ inventory }) {
         overlayClassName="fixed inset-0 bg-black bg-opacity-75"
       >
         <div className="relative bg-white p-4 rounded-lg max-w-3xl mx-auto">
-          <button onClick={closeModal} className="absolute top-2 right-2 text-white bg-red-500 hover:bg-red-700 rounded-full p-2">
+          <button onClick={closeModal} className="absolute top-2 right-2 text-white bg-red-500 text-center hover:bg-red-700 rounded-full p-2">
             &times;
           </button>
           <img src={selectedImage} alt="Full View" className="w-full h-full object-contain" />
