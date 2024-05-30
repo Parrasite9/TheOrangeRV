@@ -1,1 +1,41 @@
+# Dependency directories
 node_modules/
+
+# Cache and build directories
+.cache/
+dist/
+build/
+
+# Logs
+logs/
+*.log
+
+# OS-generated files
+.DS_Store
+
+# IDE and editor-specific files
+.idea/
+.vscode/
+*.swp
+
+# Environment variables
+.env
+
+# Coverage directory used by testing tools
+coverage/
+
+# npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore any other build artifacts and temporary files
+*.tmp
+*.temp
+
+# Ignore specific files for React applications
+public/static/
+
+# Ignore lock files (optional)
+package-lock.json
+yarn.lock
