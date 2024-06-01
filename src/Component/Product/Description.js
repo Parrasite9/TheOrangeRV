@@ -12,6 +12,8 @@ import CarCrashIcon from '@mui/icons-material/CarCrash';
 import HeightIcon from '@mui/icons-material/Height';
 import HotelIcon from '@mui/icons-material/Hotel';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import Location from '../Home/Location';
 
 
 Modal.setAppElement('#root'); // Set the app element for accessibility
@@ -106,22 +108,22 @@ function Description({ inventory }) {
                 </div> 
 
                 {/* VIEW DETAILS  */}
-                <div className="description__details__button border rounded border-lively-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
+                <div className="description__details__button border rounded border-sunset-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
                     <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>View Details</button></Link>
                 </div>
             </div>
 
             <div className="description__details__container">
               {/* SECTION TITLES  */}
-              <div className="section__titles">
-                <p>Specs & Overview</p>
-                <p>Location Details</p>
+              <div className="section__titles flex justify-evenly mx-5 mb-5">
+                <a href="#specs">Specs & Overview</a>
+                <a href="#location">Location Details</a>
               </div>
               
               {/* SPECS  */}
-              <div className="specs__and__overview">
-                <div className="specs__title">
-                  <h1>Specs & Overview</h1>
+              <div className="specs__and__overview" id='specs'>
+                <div className="specs__title mb-5">
+                  <h1 className='text-center font-bold text-2xl'>Specs & Overview</h1>
                 </div>
 
 
@@ -134,14 +136,14 @@ function Description({ inventory }) {
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           {/* div2 (section container) */}
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><StraightenIcon /></div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><StraightenIcon className='text-white' /></div>
                             <div class="col-span-1 font-semibold text-center">Length</div>
                             <div class="col-span-1 font-normal text-center">{item.length} ft</div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"> <ScaleIcon /></div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"> <ScaleIcon className='text-white' /></div>
                             <div class="col-span-1 font-semibold text-center"> Weight</div>
                             <div class="col-span-1 font-normal text-center">{item.weight} lbs</div>
                           </div>
@@ -149,28 +151,28 @@ function Description({ inventory }) {
                         {/* <!-- Repeat the pattern for the rest of the divs --> */}
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><CarCrashIcon /></div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><CarCrashIcon className='text-white' /></div>
                             <div class="col-span-1 font-semibold text-center">GVWR</div>
                             <div class="col-span-1 font-normal text-center">{item.gvwr} lbs </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><HeightIcon /> </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><HeightIcon className='text-white' /> </div>
                             <div class="col-span-1 font-semibold text-center">Height</div>
                             <div class="col-span-1 font-normal text-center">{item.height} lbs </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><HotelIcon /> </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><HotelIcon className='text-white' /> </div>
                             <div class="col-span-1 font-semibold text-center">Sleeps</div>
                             <div class="col-span-1 font-normal text-center">{item.sleeps} </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-sunset-orange rounded-full w-16 h-16"><WaterDropIcon /> </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><WaterDropIcon className='text-white' /> </div>
                             <div class="col-span-1 font-semibold text-center">Water</div>
                             <div class="col-span-1 font-normal text-center">{item.freshWater} gal. </div>
                           </div>
@@ -180,14 +182,36 @@ function Description({ inventory }) {
                   </div>
                 </div>
 
-
-
-
-
               </div>
 
               {/* LOCATION DETAILS  */}
-              <div className="location__details"></div>
+              <div className="location__details">
+                <div className="specs__title mb-5">
+                  <h1 className='text-center font-bold text-2xl'>Location Details</h1>
+                </div>
+
+                <div className="name__and__town mb-5">
+                  <h2 className='flex'><span className='font-semibold'>The Orange RV</span>{' | '}<span>(West Odessa, TX)</span></h2>
+                </div>
+
+                <div className="address mb-5">
+                  <h2>1234 streetName Rd.</h2>
+                  <h2>Odessa, TX</h2>
+                </div>
+
+                <div className="get__directions mb-5">
+                  <h2>Get Directions</h2>
+                </div>
+
+                <div className="description__phone flex">
+                  <LocalPhoneIcon />
+                  <a href="tel:4323019668" className='text-sunset-orange'>+1 (432) 301-9668</a>
+                </div>
+
+                <div className="location__import" id='location'>
+                  <Location />
+                </div>
+              </div>
             </div>
           </div>
         ) : (
