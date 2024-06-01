@@ -82,7 +82,7 @@ function Description({ inventory }) {
               </div>
 
               {/* DETAILS  */}
-              <div className="description__rv__info mx-2 lg:w-1/3">
+              <div className="description__rv__info mx-2 lg:w-1/3 lg:ml-5">
                   <div className="description__year__and__model flex mb-5">
                       <p className="description__text-lg font-semibold">{item.year}</p>
                       <h2 className="description__text-xl font-semibold ml-2">{item.name}</h2>
@@ -92,7 +92,7 @@ function Description({ inventory }) {
                   <div className="description__price__and__sleeps flex justify-between">
                       <div className="condition__and__sleeps">
                           <p className='font-semibold '>USED</p>
-                          {/* <p className="text-lg">Sleeps: {item.sleeps}</p> */}
+                          <p className="text-lg">{item.title}</p>
                       </div>
 
                       {/* PRICE AND PRICE TEXT  */}
@@ -134,49 +134,49 @@ function Description({ inventory }) {
                   <div class="grid grid-cols-4 grid-rows-6 gap-0">
                     <div class="col-span-4 row-span-6">
                       {/* div1 (container) */}
-                      <div class="grid grid-cols-4 grid-rows-6 gap-0 md:gap-x-14">
+                      <div class="grid grid-cols-4 grid-rows-6 gap-0 md:gap-x-14 lg:gap-x-0">
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           {/* div2 (section container) */}
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><StraightenIcon className='text-white' /></div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-end"><StraightenIcon className='text-white' /></div>
                             <div class="col-span-1 font-semibold text-center">Length</div>
                             <div class="col-span-1 font-normal text-center">{item.length} ft</div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"> <ScaleIcon className='text-white' /></div>
-                            <div class="col-span-1 font-semibold text-center"> Weight</div>
-                            <div class="col-span-1 font-normal text-center">{item.weight} lbs</div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-center"> <ScaleIcon className='text-white' /></div>
+                            <div class="col-span-1 font-semibold text-center lg:justify-self-start"> Weight</div>
+                            <div class="col-span-1 font-normal text-center lg:justify-self-start">{item.weight} lbs</div>
                           </div>
                         </div>
                         {/* <!-- Repeat the pattern for the rest of the divs --> */}
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><CarCrashIcon className='text-white' /></div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-end"><CarCrashIcon className='text-white' /></div>
                             <div class="col-span-1 font-semibold text-center">GVWR</div>
                             <div class="col-span-1 font-normal text-center">{item.gvwr} lbs </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><HeightIcon className='text-white' /> </div>
-                            <div class="col-span-1 font-semibold text-center">Height</div>
-                            <div class="col-span-1 font-normal text-center">{item.height} lbs </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-center"><HeightIcon className='text-white' /> </div>
+                            <div class="col-span-1 font-semibold text-center lg:justify-self-start">Height</div>
+                            <div class="col-span-1 font-normal text-center lg:justify-self-start">{item.height} lbs </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><HotelIcon className='text-white' /> </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-end"><HotelIcon className='text-white' /> </div>
                             <div class="col-span-1 font-semibold text-center">Sleeps</div>
                             <div class="col-span-1 font-normal text-center">{item.sleeps} </div>
                           </div>
                         </div>
                         <div class="col-span-2 row-span-2 ml-5">
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
-                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16"><WaterDropIcon className='text-white' /> </div>
-                            <div class="col-span-1 font-semibold text-center">Water</div>
-                            <div class="col-span-1 font-normal text-center">{item.freshWater} gal. </div>
+                            <div class="col-span-1 row-span-2 flex justify-center items-center bg-lively-orange rounded-full w-16 h-16 lg:justify-self-center"><WaterDropIcon className='text-white' /> </div>
+                            <div class="col-span-1 font-semibold text-center lg:justify-self-start">Water</div>
+                            <div class="col-span-1 font-normal text-center lg:justify-self-start">{item.freshWater} gal. </div>
                           </div>
                         </div>
                       </div>
