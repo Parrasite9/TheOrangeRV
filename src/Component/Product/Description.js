@@ -109,7 +109,7 @@ function Description({ inventory }) {
 
                 {/* VIEW DETAILS  */}
                 <div className="description__details__button border rounded border-sunset-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
-                    <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>View Details</button></Link>
+                    <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>Schedule Appointment</button></Link>
                 </div>
             </div>
 
@@ -239,6 +239,3 @@ function Description({ inventory }) {
 }
 
 export default Description;
-
-
-// I HAVE JUST CREATED ANCHOR LINKS. I NEED TO FIX THE GIT SO I CAN PUSH CHANGES.

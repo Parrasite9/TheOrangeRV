@@ -16,7 +16,7 @@ function Filter() {
   const [priceRange, setPriceRange] = useState([0, 50000]);
   const [yearRange, setYearRange] = useState([2000, 2024]);
   const [sleepsRange, setSleepsRange] = useState([1, 20]);
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const defaultPriceRange = [0, 50000];
   const defaultYearRange = [2000, 2024];
