@@ -73,7 +73,7 @@ function Description({ inventory }) {
                 className="rounded-lg shadow-lg"
               >
                 {item.album.map((image, index) => (
-                  <div key={index} className="h-64" onClick={() => openModal(image)}>
+                  <div key={index} className="sm:h-80 md:h-96 lg:h-128 xl:h-144" onClick={() => openModal(image)}>
                     <img src={image} alt={`${item.name} ${index + 1}`} className="object-cover h-full w-full rounded-lg cursor-pointer" />
                   </div>
                 ))}
@@ -132,7 +132,7 @@ function Description({ inventory }) {
                   <div class="grid grid-cols-4 grid-rows-6 gap-0">
                     <div class="col-span-4 row-span-6">
                       {/* div1 (container) */}
-                      <div class="grid grid-cols-4 grid-rows-6 gap-0">
+                      <div class="grid grid-cols-4 grid-rows-6 gap-0 md:gap-x-14">
                         <div class="col-span-2 row-span-2 mb-5 mr-5">
                           {/* div2 (section container) */}
                           <div class="grid grid-cols-2 grid-rows-2 gap-0">
