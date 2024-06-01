@@ -60,57 +60,59 @@ function Description({ inventory }) {
               <h1>{item.model} </h1>
             </div>
 
-            {/* CARASOUL  */}
-            <div className="mb-4">
-              <Carousel
-                showArrows={true}
-                infiniteLoop={true}
-                showThumbs={false}
-                useKeyboardArrows={true}
-                autoPlay={true}
-                stopOnHover={true}
-                showStatus={false}
-                className="rounded-lg shadow-lg"
-              >
-                {item.album.map((image, index) => (
-                  <div key={index} className="sm:h-80 md:h-96 lg:h-128 xl:h-144" onClick={() => openModal(image)}>
-                    <img src={image} alt={`${item.name} ${index + 1}`} className="object-cover h-full w-full rounded-lg cursor-pointer" />
-                  </div>
-                ))}
-              </Carousel>
-            </div>
-
-            {/* DETAILS  */}
-            <div className="description__rv__info mx-2">
-                <div className="description__year__and__model flex mb-5">
-                    <p className="description__text-lg font-semibold">{item.year}</p>
-                    <h2 className="description__text-xl font-semibold ml-2">{item.name}</h2>
-                </div>
-
-                {/* PRICE AND SLEEPS  */}
-                <div className="description__price__and__sleeps flex justify-between">
-                    <div className="condition__and__sleeps">
-                        <p className='font-semibold '>USED</p>
-                        {/* <p className="text-lg">Sleeps: {item.sleeps}</p> */}
+            <div className='lg:flex lg:mb-5'>
+              {/* CARASOUL  */}
+              <div className="mb-4 lg:w-2/3">
+                <Carousel
+                  showArrows={true}
+                  infiniteLoop={true}
+                  showThumbs={false}
+                  useKeyboardArrows={true}
+                  autoPlay={true}
+                  stopOnHover={true}
+                  showStatus={false}
+                  className="rounded-lg shadow-lg"
+                >
+                  {item.album.map((image, index) => (
+                    <div key={index} className="sm:h-80 md:h-96 lg:h-128 xl:h-144" onClick={() => openModal(image)}>
+                      <img src={image} alt={`${item.name} ${index + 1}`} className="object-cover h-full w-full rounded-lg cursor-pointer" />
                     </div>
+                  ))}
+                </Carousel>
+              </div>
 
-                    {/* PRICE AND PRICE TEXT  */}
-                    <div className="price__and__priceText flex flex-col flex-end">
-                        <p>Sale Price</p>
-                        <p className="text-lg">${item.price}</p>
-                    </div>              
-                </div>
+              {/* DETAILS  */}
+              <div className="description__rv__info mx-2 lg:w-1/3">
+                  <div className="description__year__and__model flex mb-5">
+                      <p className="description__text-lg font-semibold">{item.year}</p>
+                      <h2 className="description__text-xl font-semibold ml-2">{item.name}</h2>
+                  </div>
 
-                {/* BUTTONS  */}
-                <div className="description__offer__and__available flex justify-between mb-10">
-                    <button className='bg-blue-500 text-center text-white p-2 w-[40%]'>Confirm Availability</button>    
-                    <button className='bg-fresh-green text-white p-2 w-[40%]'>Make An Offer</button>    
-                </div> 
+                  {/* PRICE AND SLEEPS  */}
+                  <div className="description__price__and__sleeps flex justify-between">
+                      <div className="condition__and__sleeps">
+                          <p className='font-semibold '>USED</p>
+                          {/* <p className="text-lg">Sleeps: {item.sleeps}</p> */}
+                      </div>
 
-                {/* VIEW DETAILS  */}
-                <div className="description__details__button border rounded border-sunset-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
-                    <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>Schedule Appointment</button></Link>
-                </div>
+                      {/* PRICE AND PRICE TEXT  */}
+                      <div className="price__and__priceText flex flex-col flex-end lg:mb-5">
+                          <p>Sale Price</p>
+                          <p className="text-lg">${item.price}</p>
+                      </div>              
+                  </div>
+
+                  {/* BUTTONS  */}
+                  <div className="description__offer__and__available flex justify-between mb-10">
+                      <button className='bg-blue-500 rounded text-center text-white p-2 w-[40%]'>Confirm Availability</button>    
+                      <button className='bg-fresh-green rounded text-white p-2 w-[40%]'>Make An Offer</button>    
+                  </div> 
+
+                  {/* VIEW DETAILS  */}
+                  <div className="description__details__button border rounded border-sunset-orange bg-sunset-orange hover:bg-lively-orange text-white text-center p-2 my-5">
+                      <Link to={`/browse/${item.id}/${item.year}/${item.type}/${item.name}`}><button>Schedule Appointment</button></Link>
+                  </div>
+              </div>
             </div>
 
             <div className="description__details__container">
