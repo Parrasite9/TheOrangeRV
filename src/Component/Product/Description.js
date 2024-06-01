@@ -239,3 +239,6 @@ function Description({ inventory }) {
 }
 
 export default Description;
+
+
+// I HAVE JUST CREATED ANCHOR LINKS. I NEED TO FIX THE GIT SO I CAN PUSH CHANGES.
