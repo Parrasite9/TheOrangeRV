@@ -14,6 +14,8 @@ import HotelIcon from '@mui/icons-material/Hotel';
 import WaterDropIcon from '@mui/icons-material/WaterDrop';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import Location from '../Home/Location';
+import { useScreenWidth } from '../Global/ScreenWidthContext';
+import Map from '../Map/Map';
 
 
 Modal.setAppElement('#root'); // Set the app element for accessibility
@@ -22,6 +24,7 @@ function Description({ inventory }) {
   const { id } = useParams();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState('');
+  const isMobile = useScreenWidth();
 
   const openModal = (image) => {
     setSelectedImage(image);
@@ -189,31 +192,46 @@ function Description({ inventory }) {
               {/* LOCATION DETAILS  */}
               <div className="location__details">
                 <div className="specs__title mb-5">
-                  <h1 className='text-center font-bold text-2xl'>Location Details</h1>
+                  <h1 className="text-center font-bold text-2xl lg:mb-5">Location Details</h1>
                 </div>
 
-                <div className="name__and__town mb-5">
-                  <h2 className='flex'><span className='font-semibold'>The Orange RV</span>{' | '}<span>(West Odessa, TX)</span></h2>
-                </div>
+                <div className="lg:flex lg:gap-10">
+                  <div className="lg:w-1/2">
+                    <div className="name__and__town mb-5">
+                      <h2 className="flex lg:text-xl">
+                        <span className="font-semibold">The Orange RV</span>
+                        {' | '}
+                        <span>(West Odessa, TX)</span>
+                      </h2>
+                    </div>
 
-                <div className="address mb-5">
-                  <h2>1234 streetName Rd.</h2>
-                  <h2>Odessa, TX</h2>
-                </div>
+                    <div className="address mb-5 lg:text-2xl">
+                      <h2>1234 streetName Rd.</h2>
+                      <h2>Odessa, TX</h2>
+                    </div>
 
-                <div className="get__directions mb-5">
-                  <h2>Get Directions</h2>
-                </div>
+                    <div className="get__directions mb-5 lg:text-xl">
+                      <h2>Get Directions</h2>
+                    </div>
 
-                <div className="description__phone flex">
-                  <LocalPhoneIcon />
-                  <a href="tel:4323019668" className='text-sunset-orange'>+1 (432) 301-9668</a>
-                </div>
+                    <div className="description__phone flex mb-5 lg:text-xl">
+                      <LocalPhoneIcon />
+                      <a href="tel:4323019668" className="text-sunset-orange">+1 (432) 301-9668</a>
+                    </div>
+                  </div>
 
-                <div className="location__import" id='location'>
-                  <Location />
+                  <div className="lg:w-1/2">
+                    <div className="location__import" id="location">
+                      {isMobile ? (
+                        <Location />
+                      ) : (
+                        <Map />
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
           </div>
         ) : (
