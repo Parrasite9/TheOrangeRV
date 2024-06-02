@@ -39,7 +39,7 @@ function Navbar() {
   return (
     <nav className='flex py-2 bg-lively-orange text-ivory-white'>
       <div className="flex w-3/4 justify-center md:w-1/4 pl-2">
-        THE ORANGE RV
+        <Link to='/'>THE ORANGE RV</Link>
       </div>
 
       {isMobile ? (
@@ -50,7 +50,7 @@ function Navbar() {
                 <CloseIcon className='cursor-pointer' onClick={exitMenu} />
               </div>
               <div className="mobile__menu flex flex-col items-center justify-center py-5 px-10 space-y-4">
-                <ul>
+                <ul className='space-y-6 text-center'>
                   {navLinks.map((item, index) => (
                     <li key={index}>
                       <Link className={item.className} to={item.href}>
