@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useScreenWidth } from '../Global/ScreenWidthContext'
 
 function Hero() {
@@ -13,9 +14,10 @@ function Hero() {
               <h3 className="font-semibold text-lg mb-3">Adventure Starts Here:</h3> 
               <h1 className='text-4xl font-bold mb-4'>Experience the Freedom of the Open Road</h1>
               <img src="/images/hero/test.png" alt="bumper-pull" />
-              <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 mt-4 rounded">
-                  Browse Our Collection
-              </button>
+              <Link to='/search' className="text-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 mt-4 rounded-2xl w-4/5 mx-auto">
+                Browse Our Collection
+              </Link>
+
           </div>
         </>
       ) : (
@@ -27,9 +29,13 @@ function Hero() {
                             ">
               <h3 className="font-semibold mb-3 text-xl 2xl:text-2xl">Adventure Starts Here:</h3> 
               <h1 className='text-5xl 2xl:text-6xl font-bold mb-4'>Experience the Freedom of the Open Road</h1>
-              <button className="text-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 mt-4 rounded 2xl:w-4/5">
+              {/* <Link to='/search' ><button className="text-xl bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 mt-4 rounded 2xl:w-4/5">
                   Browse Our Collection
-              </button>
+              </button></Link> */}
+              <Link to='/search' className="text-xl text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 mt-4 rounded-2xl w-4/5">
+                Browse Our Collection
+              </Link>
+
 
             </div>
 
